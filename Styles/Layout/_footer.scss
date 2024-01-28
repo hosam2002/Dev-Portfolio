@@ -45,6 +45,7 @@
         font-weight: 300;
 
         @include respond (break-550) { font-size: 1.8rem; }
+        @include respond (break-400) { line-height: 1.5; }
     }
 
     &__desc { padding-bottom: 3.5rem; border-bottom: 1px solid $bg-grey-300; }
