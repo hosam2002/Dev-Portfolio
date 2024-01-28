@@ -1,0 +1,219 @@
+.projects {
+
+    width: 85%;
+    padding: 2.5rem 0;
+
+    margin: 7.5rem auto 0;
+
+    display: flex;
+    flex-direction: column;
+
+    & > div:not(:last-child) {
+
+        margin: 0 0 10rem 0;
+    }
+}
+
+.projects {
+
+    &__decor {
+
+        @include respond (break-400) { display: none; }
+
+        position: absolute;
+        left: 0;
+
+        & > img { 
+            
+            height: 30rem; 
+            border-radius: 10px 0 0 10px;
+
+            @include respond (break-785) { height: auto; }
+            @include respond (break-470) { min-height: 35rem; }
+        }
+    }
+
+    &__heading,
+    &__content {
+    
+        width: 100%;
+    }
+
+    &__content {
+        
+        padding: 1.5rem 0;
+        border-radius: 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        & > div:not(:last-child) {
+        
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__item {
+
+        @include respond (break-785) {
+
+            min-height: 30rem;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include respond (break-470) {
+
+            min-height: 35rem;
+        }
+
+        position: relative;
+    
+        width: 100%;
+        height: 30rem;
+
+        border-radius: 10px;
+        background-color: $bg-purble;
+
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__info {
+
+        @include respond (break-785) {
+        
+            width: 100%;
+            height: auto;
+
+            padding: 2.5rem 2.5rem 5rem 2.5rem;
+        }
+
+        position: relative;
+
+        height: 100%;
+        width: calc(100% - 30rem);
+        padding: 3.5rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        & > div:not(:last-child) {
+        
+            margin-bottom: 1.5rem;
+            
+            @include respond (break-470) { margin-bottom: 3.5rem; }
+        }
+    }
+
+    &__img {
+        
+        width: 15rem;
+
+        @include respond (break-785) {
+        
+            width: 15rem;
+        }   
+    }
+
+    &__title,
+    &__description {
+
+        width: 100%;
+        color: $bg-white;
+    }
+
+    &__title {
+    
+        font-size: 2rem;
+        font-weight: 900;
+    }
+
+    &__description {
+
+        @include respond (break-470) {
+        
+            text-align: justify;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1.5; 
+
+        padding: 0 0 2.5rem 0;
+        
+        & > span {
+
+            font-weight: 500;
+
+            @include respond (break-400) {
+                
+                font-weight: 700;
+            }                   
+        }
+    }
+
+    &__btn,
+    &__link {
+
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: 900;
+        color: $bg-white;
+
+        transition: transform .4s;
+
+        &:hover {
+        
+            transform: translateY(-3px);
+        }
+
+        &:active {
+        
+            transform: translateY(0);
+        }
+    }
+
+    &__link {
+
+        @include respond (break-785) { display: none; }
+
+        position: absolute;
+        bottom: 2.5rem;
+        right: 2.5rem;
+
+        @include respond (break-785) {
+        
+            display: none;
+        }
+    }
+
+    &__btn {
+
+        @include respond (break-785) { display: inline-block; }
+
+        display: none;
+
+        position: absolute;
+        bottom: 2.5rem;
+        left: 2.5rem;
+
+        transition: transform .4s;
+
+        &:hover {
+        
+            transform: translateY(-3px);
+        }
+
+        &:active {
+        
+            transform: translateY(0);
+        }    
+    }
+}

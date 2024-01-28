@@ -1,0 +1,63 @@
+.h-primary {
+
+    color: $bg-white;
+
+    &--main {
+        
+        font-size: 4.6rem;
+        letter-spacing: 2.5rem;
+        display: block;
+    }
+
+    &--sub {
+        
+        font-size: 2.4rem;
+    }
+
+    &__o-8 {
+
+        opacity: .8;
+    }
+
+    &__grey {
+
+        color: $bg-grey-400 !important;
+    }
+
+    &__uppercase {
+
+        text-transform: uppercase;
+    }
+}
+
+.h-secondary {
+
+    font-size: 2.4rem;
+    color: $bg-white;
+
+    &__o-8 {
+
+        opacity: .8;
+    }
+
+    &__grey {
+
+        color: $bg-grey-400 !important;
+    }
+}
+
+.h-tertiary {
+
+    font-size: 1.6rem;
+    color: $bg-white;
+
+    &__o-8 {
+
+        opacity: .8;
+    }
+
+    &__grey {
+
+        color: $bg-grey-400 !important;
+    }
+}

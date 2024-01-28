@@ -1,0 +1,109 @@
+.footer {
+    
+    width: 100%;
+    min-height: 45rem;
+    margin-top: 5rem;
+    padding: 6.5rem;
+
+    background-color: $bg-grey-050;
+
+    @include respond (break-600) { padding: 5rem 4rem; }
+    @include respond (break-490) { padding: 5rem 2.5rem; }
+}
+
+.footer {
+
+    &__brand,
+    &__desc,
+    &__nav,
+    &__copyrights {
+
+        width: 100%;
+    }
+
+    &__brand,
+    &__desc {
+
+        display: flex;
+        justify-content: center;
+
+        @include respond (break-550) { justify-content: flex-start; }
+    }
+
+    &__brand {
+
+        margin-bottom: 3rem;
+
+        & > img { width: 25rem; }
+
+        @include respond (break-550) { & > img { width: 20rem } }
+    }
+
+    &__desc {
+
+        font-size: 2.2rem;
+        font-weight: 300;
+
+        @include respond (break-550) { font-size: 1.8rem; }
+    }
+
+    &__desc { padding-bottom: 3.5rem; border-bottom: 1px solid $bg-grey-300; }
+    &__nav { margin-top: 3.5rem; padding-bottom: 3.5rem}
+    &__copyrights { margin-top: 3.5rem; }
+
+    &__nav {
+
+        width: 100%;
+        height: max-content;
+        border-bottom: 1px solid $bg-grey-300;
+
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        grid-template-rows: repeat(auto, max-content);
+        column-gap: 5rem;
+
+        @include respond (break-470) {
+
+            grid-template-columns: repeat(2, max-content);
+            row-gap: 5rem;
+        }
+    }
+
+    &__list {
+
+        width: max-content;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &--heading,
+        &--link {
+
+            color: $bg-slate-700;
+        }
+
+        &--heading {
+
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+
+        &--link {
+
+            font-size: 1.6rem;
+            font-weight: 300;
+
+            &:not(:last-child) { margin-bottom: 1.5rem; }
+            &:hover { text-decoration: underline; }
+        }
+    }
+
+    &__copyrights {
+
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+}

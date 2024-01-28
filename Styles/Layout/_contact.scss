@@ -1,0 +1,183 @@
+.contact {
+
+    width: 85%;
+    padding: 2.5rem 0;
+
+    margin: 7.5rem auto 0;
+
+    display: flex;
+    flex-direction: column;
+
+    /*
+    gap: 5rem;
+    */
+
+    & > div:not(:last-child) {
+
+        margin: 0 0 10rem 0;
+    }
+}
+
+.contact {
+
+    &__form {
+    
+        width: 100%;
+        padding: 1.5rem 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        /*
+        gap: 1.5rem;
+        */
+
+        & > *:not(:last-child) {
+        
+            margin: 0 0 1.5rem 0;
+        }
+
+        & form {
+        
+            width: 100%;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            /*
+            gap: 1.5rem;
+            */
+
+            & > *:not(:last-child) {
+        
+                margin: 0 0 1.5rem 0;
+            }
+        }
+    }
+
+    &__item {
+        
+        width: 50%;
+        display: block;
+
+        @include respond (break-1030) {
+        
+            width: 70%;
+        }
+
+        @include respond (break-865) {
+        
+            width: 100%;
+        }
+    }
+}
+
+// Form
+
+.contact {
+
+    &__warn {
+    
+        width: 50%;
+        padding: 2.5rem 0;
+        border-radius: 5px;
+
+        background-color: $bg-red-050;
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-align: center;
+        color: $bg-red-500;
+
+        @include respond (break-1030) {
+        
+            width: 70%;
+        }
+
+        @include respond (break-865) {
+        
+            width: 100%;
+        }
+    }
+
+    &__name,
+    &__email,
+    &__message {
+        
+        border: 1px solid $bg-grey-400;
+        border-radius: 5px;
+        padding: 0 1.5rem;
+        
+        font-size: 1.4rem;
+        font-family: inherit;
+        color: $bg-grey-500;
+
+        &::placeholder {
+        
+            color: $bg-grey-500;
+        }
+
+        &:focus {
+        
+            outline: none;
+        }
+
+        &:disabled {
+        
+            background-color: $bg-grey-050;
+        }
+    }
+
+    &__name,
+    &__email,
+    &__submit {
+
+        height: 4rem;    
+    }
+
+    &__name,
+    &__email,
+    &__message,
+    &__submit {
+
+    }
+
+    &__message {
+
+        padding: 1.5rem;        
+        min-height: 20rem;
+        max-height: 25rem;
+        resize: vertical;
+    }
+
+    &__submit {
+
+        border: none;
+        border-radius: 5px;
+
+        /*
+        background-image: linear-gradient(to right, $bg-blue-300, $bg-blue-500);
+        */
+
+        background-color: $bg-sky-600;
+        color: $bg-white;
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: inherit;
+        transition: transform .4s;
+        
+        &:hover {
+        
+            transform: translateY(-3px);
+        }
+
+        &:active {
+        
+            transform: translateY(0);
+        }
+    }
+}

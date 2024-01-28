@@ -1,0 +1,89 @@
+.languages {
+
+    width: 85%;
+    padding: 2.5rem 0;
+
+    margin: 7.5rem auto 0;
+
+    display: flex;
+    flex-direction: column;
+    
+    & > div:not(:last-child) {
+
+        margin: 0 0 10rem 0;
+    }
+}
+
+.languages {
+   
+    &__content {
+
+        @include respond (break-1010) {
+        
+            grid-template-columns: repeat(5, 15rem);
+        }
+
+        @include respond (break-840) {
+        
+            grid-template-columns: repeat(4, 15rem);
+        }
+
+        @include respond (break-670) {
+        
+            grid-template-columns: repeat(3, 15rem);
+        }
+
+        @include respond (break-510) {
+        
+            grid-template-columns: repeat(2, 10rem);
+            grid-template-columns: repeat(auto, 10rem);
+        }
+
+        display: grid;
+
+        grid-template-columns: repeat(6, 15rem);
+        grid-template-columns: repeat(auto, 15rem);
+
+        place-items: center;
+        place-content: center;
+
+        gap: 1.5rem;
+    }
+
+    &__item {
+
+        @include respond (break-510) {
+        
+            width: 10rem;
+            height: 10rem;
+        }
+    
+        width: 15rem;
+        height: 15rem;
+
+        border-radius: 5px;
+        background-color: $bg-white;
+
+        border: 1px solid $bg-grey-100;
+        @include shadow-lg;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all .4s ease-in-out;
+
+        &:hover {
+        
+            transform: scale(1.025);
+            border: 1px solid $bg-grey-200;
+        }
+    }
+
+    &__img { 
+
+        @include respond (break-510) { width: 6rem; }
+        
+        width: 10rem;     
+    }
+}

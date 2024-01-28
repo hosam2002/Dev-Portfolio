@@ -1,0 +1,249 @@
+.home {
+
+    @include respond (break-865) { padding: 0; }
+
+    width: 80%;
+    padding: 5rem;
+
+    margin: 0 auto;
+    border-radius: 10px;
+
+    background-color: $bg-sky-100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    @include respond (break-1170) {
+    
+        width: 85%;
+    }
+
+    @include respond (break-570) {
+    
+        width: 90%;
+    }
+
+    @include respond (break-370) {
+    
+        width: 95%;
+    }
+}
+
+.home {
+
+    &__content,
+    &__img {
+        
+        @include respond (break-865) { height: auto; }
+        height: 40rem;
+    }
+
+    &__content {
+
+        width: 50rem;
+
+        @include respond (break-865) {
+            
+            width: 100%;
+            padding: 3.5rem;
+            height: 35rem;
+        }
+
+        padding: 0;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+
+        & > div:not(:last-child) {
+        
+            margin: 0 0 .15rem 0;
+        }
+    }
+
+    &__img {
+
+        width: 50rem;
+
+        @include respond (break-1010) {
+        
+            width: 35rem !important;
+        }
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        @include respond (break-865) {
+            
+            display: none;
+        }
+
+        & > img {
+
+            @include respond (break-1010) { width: 30rem; }
+        
+            width: 35rem;
+
+            /*            
+            @include respond (break-1300) {
+            
+                width: 30rem;
+            }
+
+            @include respond (break-1130) {
+
+                width: 25rem;
+            }
+            */
+        }
+    }
+
+    &__shapes {
+
+        &--top-left {
+        
+            position: absolute;
+            top: -15px;
+            left: -25px;
+
+            @include respond (break-570) {
+        
+                top: -15px;
+                left: -15px;
+            }
+
+            @include respond (break-370) {
+            
+                top: -15px;
+                left: -10px;
+            }
+
+            & svg {
+
+                @include respond (break-370) { width: 6rem; }
+            
+                width: 7.5rem;
+                fill: rgba($bg-sky-500, .5);
+
+                transform: rotate(105deg);
+            }
+        }
+
+        &--bottom-right {
+        
+            position: absolute;
+            bottom: -25px;
+            right: -25px;
+
+            @include respond (break-570) {
+        
+                right: -15px;
+            }
+
+            @include respond (break-370) {
+            
+                right: -3px;
+            }
+
+            & svg {
+
+                @include respond (break-370) { width: 6rem; }
+            
+                width: 7.5rem;
+                fill: rgba($bg-yellow-400, .5);
+            }
+        }
+    }
+}
+
+// Content side styling
+
+.home {
+
+    &__heading,
+    &__desc,
+    &__footer {
+    
+        width: 100%;        
+        padding: 1.25rem;
+    }
+
+    &__heading {
+
+        font-size: 3.5rem;
+        font-weight: 400;
+
+        color: $bg-slate-800;
+
+        @include respond (break-410) {
+        
+            font-size: 2.8rem;
+            font-weight: 500;
+        }
+
+        @include respond (break-335) {
+        
+            font-size: 2.2rem;
+        }
+
+        & span {
+        
+            text-decoration: underline;
+            font-style: italic;
+            font-weight: 800;
+            color: inherit;
+        }
+    }
+
+    &__desc {
+
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.5;
+
+        color: $bg-slate-600;
+
+        & > span {
+      
+            line-height: 25px;
+            font-weight: 700;
+        }
+
+        @include respond (break-400) {
+        
+            text-align: justify;
+        }
+
+        @include respond (break-370) {
+        
+            font-size: 1.6rem;
+        } 
+    }
+
+    &__button {
+        
+        display: inline-block;
+        text-decoration: none;
+
+        font-weight: 900;
+        font-size: 1.8rem;
+        color: $bg-sky-600;
+
+        transition: transform .4s;
+
+        &:hover {
+        
+            transform: translateY(-4px);
+        }
+
+        &:active {
+        
+            transform: translateY(0);
+        }
+    }
+}
